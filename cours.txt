@@ -370,3 +370,96 @@ La fonction renvoie quand même une valeur, la valeur « None », pour « pas de
 valeur ». Si on tape une expression renvoyant « None » dans l'interpréteur,
 Python ne l'affiche pas, contrairement aux nombres ou au texte, par exemple,
 sauf si on le lui demande explicitement avec « print ».
+
+6. La récursion
+
+On va maintenant écrire de vraies fonctions. De vraies programmes. On rappelle
+que le but d'un programme, c'est de résoudre un problème de façon mécanique en
+le découpant en une suite de problèmes plus simples, que quelqu'un de
+complètement idiot (au hasard, un ordinateur... ) pourrait effectuer 
+automatiquement sans avoir aucune idée de ce qu'il est en train de faire, mais
+en fournissant tout de même un résultat correct /in fine/.
+
+Commençons sans trop d'ambition. Par exemple, on pourrait écrire un programme
+(une fonction...) qui étant donné un nombre nous dit s'il est pair ou pas.
+
+Il existe une façon évidente de faire cela. Un entier est pair si et seulement
+si il est divisible par deux, c'est à dire si le reste dans la division de cet
+entier par deux est zéro. En Python, l'opérateur « % » (ou « modulo ») sert à
+ça.
+
+>>> # Dans l'interpréteur...
+>>> 5 % 2
+1
+>>> 4 % 2
+0
+
+Ceci nous donne une version facile de la fonction :
+
+>>> def est_pair(a):
+...     if a % 2 == 0:
+...         return True
+...     else 
+...         return False
+...
+
+Ce n'est pas très joli. On peut mieux faire :
+
+>>> def est_pair(a):
+...     return a % 2 == 0
+...
+
+La valeur de cette expression est déjà celle que nous avons besoin de renvoyer.
+« True » si le nombre est pair, « False » sinon.
+
+Bien, cela nous a permis de pratiquer un peu les fonctions, d'en écrire une qui
+correspond à un petit problème concret, et de voir qu'il existe parfois plusieurs
+façons, plus ou moins jolies, d'écrire des programmes. La dernière version est
+très bien. Jolie, efficace, tout ce qu'il faut.
+
+Mais elle ne m'intéresse pas pour vous apprendre ce que je veux vous apprendre.
+À savoir, la façon de penser du programmeur. Comment un programmeur, confronté
+à la résolution d'un problème, s'y prend pour le découper en étapes simples. Une
+des techniques les plus utilisées, les plus omniprésentes dans tous les domaines
+de l'informatique est la *récursion*.
+
+La récursion consiste à trouver un cas pour lequel notre problème est trivial.
+Ensuite, comme on ne peut pas gérer tous les cas, pour tous les autres, on
+essaie de se ramener d'une manière ou d'une autre à un cas trivial.
+
+Wow. Tout ça est très vague. Un exemple avec la fonction « est_pair ».
+
+* Ce qui est sûr, c'est que 1 est impair.
+* Dire qu'un nombre N est pair, c'est comme dire que N - 1 est impair.
+* Dire que N - 1 est impair, c'est comme dire que N - 2 est pair.
+* Dire que N - 2 est pair, c'est comme ...
+* ...
+
+Et on descend comme ça. Fatalement, suivant le nombre originel, on finira par
+devoir dire si 1 est pair ou impair. Et ça, c'est plutôt facile ! On n'a plus
+qu'à remonter pour dire si notre nombre était pair ou impair.
+
+On va donc résoudre le même problème, mais avec des données de plus en plus
+simples, jusqu'à ce qu'elles soient si simples que le problème devient trivial.
+
+Autrement dit, on dispose d'un cas facile
+
+Voici ce que ça donnerait en Python :
+
+>>> def est_pair(a):
+...     if a == 1:
+...         # si a est 1, la question ne se pose pas...
+...         return False
+...     else:
+...         # est ce que a est pair ? bon, voyons si a est impair...
+...         # rappel, la négation de est_pair(a) est... !est_pair(a)
+...         return !est_pair(a - 1)
+...
+
+Et voici comment un programmeur résoud un problème de façon *récursive*. En
+tàchant de ramener tous les cas compliqués à un cas plus simple du même probleme.
+Bien entendu, la version d'au-dessus, en utilisant le modulo, était à la fois
+plus simple, plus jolie, et plus performante. On ne fait qu'une opération, au
+lieu de devoir se balader dans tous les nombres de « n » jusqu'à un...
+Mais cette solution nous a permis de découvrir la pensée récursive qui nous sera
+très utile pour des problèmes plus complexes.
