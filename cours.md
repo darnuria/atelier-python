@@ -532,8 +532,8 @@ def est_pair(a):
         return False
     else:
         # est ce que a est pair ? bon, voyons si a est impair...
-        # rappel, la négation de est_pair(a) est... !est_pair(a)
-        return !est_pair(a - 1)
+        # rappel, la négation de est_pair(a) est... not est_pair(a)
+        return not est_pair(a - 1)
 ```
 
 Et voici comment un programmeur résoud un problème de façon *récursive*. En
