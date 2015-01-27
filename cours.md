@@ -1,12 +1,12 @@
-# L'interpréteur Python
+# 1. L'interpréteur Python
 
 L'interpréteur (aussi appelé « REPL » (« Read-Eval-Print-Loop ») ou « toplevel »)
 Python nous permet de saisir directement des expressions, donc Python nous donne
 la valeur.
 
-Lancons Python en tapant dans votre interpreteur de commande (shell):
+Lancons Python en tapant dans votre interpréteur de commandes (« shell ») :
 
-```Shell
+```shell
 $ python
 ```
 
@@ -20,13 +20,14 @@ Dans ce doucment, le code Python à donner à l'interpréteur est situé après 
 évidemment... ). La ligne en-dessous représenter la valeur que l'interpréteur
 devrait répondre :
 
-```Python
+```python
 >>> Ceci est le texte à donner à Python
+Ceci est ce que répond Python.
 ```
-Ceci est ce que répond Python. (en l'occurence, il ne répondrait pas ça, il vous
-dirait qu'il ne comprend rien du tout)
 
-```Python
+En l'occurence, il ne répondrait pas ça, il vous dirait qu'il ne comprend rien du tout.
+
+```python
 >>> # Ceci est un commentaire !
 >>> # Python ignore les lignes qui commencent par un '#'
 >>> # Du coup, il ne dit rien du tout... :(
@@ -35,18 +36,16 @@ dirait qu'il ne comprend rien du tout)
 Une expression est un morceau de code qui représente une valeur. Par exemple
 du texte :
 
-```Python
+```python
 >>> "Bonjour, Python :)"
 Bonjour, Python :)
 ```
 
-# Expressions arithmétiques
-
-## Operations usuelles
+# 2. Expressions arithmétiques
 
 Un nombre est une valeur.
 
-```Python
+```python
 >>> 5
 5
 ```
@@ -57,59 +56,37 @@ Le morceau de code Python « 5 » a pour valeur 5.
 Une expression « arithmétique » est une expression dont la valeur est un nombre.
 L'ordinateur est avant tout une très rapide machine à calculer.
 
-On dispose de tous les autres opérateurs habituels :
-
-### Addition
-
-```Python
+```python
 >>> 5 + 3
 8
 ```
 
 `5 + 3` est une expression dont la valeur est le résulat du calcul.
+On dispose de tous les autres opérateurs habituels :
 
-### Soustraction
-
-```Python
+```python
 >>> 5 - 3
 2
-```
-
-### Multiplication
-
-```Python
 >>> 5 * 3
 15
-```
-
-### Division sur les entiers.
-
-Note: L'opérateur `//` réalise une division d'entiers. (Renvoie le
-« quotient »). On peut forcer un résultat d'exact en indiquant à Python que les
-opérandes sont des nombres réels :
-
-```Python
->>> 5 // 3
-1
-```
-
-### Division sur les Réels
-
-L'opérateur `/` réalise une division de noms réels. Renvoie le nombre en
-précision dite "flotante".
-
-```Python
 >>> 5 / 4
 1.25
 ```
 
-## Expressions composées
+Note : L'opérateur `/` réalise une division sur les nombres réels. On peut à la
+place utiliser l'opérateur `//` pour indiquer à Python de faire une divison
+d'enteirs (renvoie le « quotient »).
+
+```python
+>>> 5 // 3
+1
+```
 
 Les opérateurs ne marchent pas que sur les nombres. Ils marchent avec n'importe
 quelle expression et produisent une nouvelle expression (dont la valeur est une
 nouvelle valeur). On peut les emboîter à l'infini :
 
-```Python
+```python
 >>> 5 + 4 + 3 + 2 + 1
 15
 >>> 5 + 3 * 2
@@ -118,12 +95,12 @@ nouvelle valeur). On peut les emboîter à l'infini :
 16
 ```
 
-# Variables
+# 3. Variables
 
 Comme en mathématiques : on peut donner un nom à une valeur, pour éviter de devoir la re-calculer,
 et de la ré-écrire, et aussi s'abstraire de ce qu'elle contient vraiment !
 
-```Python
+```python
 >>> a = 5
 ```
 
@@ -133,7 +110,7 @@ définition : « Soit a un nombre dont la valeur est 5 »
 Python ne répond rien, mais il a compris quand même, sinon il l'aurait dit !
 Vérifions.
 
-```Python
+```python
 >>> # Python, combien vaut a ?
 >>> a
 5
@@ -149,7 +126,7 @@ la valeur est la valeur que nous avons donnée à la variable.
 Du coup, il faut pouvoir exprimer des valeurs qui *dépendent* de cette variable
 sans se référer à sa valeur.
 
-```Python
+```python
 >>> a + 1
 6
 ```
@@ -158,7 +135,7 @@ Encore une expression ! Rappel : une expression est une nouvelle valeur. On
 vient d'exprimer comment construire le nombre égal à la valeur de `a` plus 1.
 `a` n'a pas été modifiée :
 
-```Python
+```python
 >>> a
 5
 >>> b = 2
@@ -170,9 +147,10 @@ Python permet tout de même de modifier la valeur d'une variable. Il suffit...
 de lui donner une nouvelle valeur. On appelle ça « ré-affecter » ou
 « ré-assigner », ou encore « muter » la variable.
 
-On appelle ça de la *mutabilité*. On dit que Python est un langage *impératif* car il permet cela.  Derrière, l'ordinateur va écrire dans la mémoire.
+On appelle ça de la *mutabilité*. On dit que Python est un langage *impératif*
+car il permet cela.  Derrière, l'ordinateur va écrire dans la mémoire.
 
-```Python
+```python
 >>> a = 5
 >>> a
 5
@@ -186,12 +164,12 @@ On appelle ça de la *mutabilité*. On dit que Python est un langage *impératif
 8
 ```
 
-# Logique booléenne.
+# 4. Logique booléenne.
 
 Un booléen est une valeur binaire. « Vrai » ou « Faux ». En Python, on écrit
 `True` et `False`.
 
-```Python
+```python
 >>> True
 True
 >>> False
@@ -200,7 +178,7 @@ False
 
 On peut du coup exprimer des comparaisons entre nos expression :
 
-```Python
+```python
 >>> a = 5
 >>> # Python, est-ce que a est égal à 5 ?
 >>> a == 5
@@ -215,7 +193,7 @@ Logique. On note que pour tester l'égalité, on utilise un double égal, `==`,
 pour le différencier du simple égal `=` qui sert à définir une variable. Les
 autres opérateurs de comparaison ?
 
-```Python
+```python
 >>> a < 6
 False
 >>> a <= 6
@@ -233,12 +211,10 @@ True
 Le `!=` veut dire « différent de », ou « non-égal ». Il ressemble au « ≠ » des
 mathématiques. Si si, un peu quand même...
 
-## And
-
 L'opérateur `and` correspond au ET logique. a ET b est vrai si et seulement si
 a est vrai ET QUE b est vrai aussi.
 
-```Python
+```python
 >>> True and False
 False
 >>> False and True
@@ -249,12 +225,10 @@ False
 True
 ```
 
-## Or
-
 De la même façon, a OU b est vrai si a est vrai OU ALORS si b est vrai. Cela
 s'appelle le OU logique. En Python, on écrit cela `or`.
 
-```Python
+```python
 >>> False or False
 False
 >>> True or False
@@ -265,12 +239,10 @@ True
 True
 ```
 
-## Not
-
 Le NON, noté `not`, donne l'inverse (pour être précis, on appelle ça la
 « négation ») d'un booléen :
 
-```Python
+```python
 >>> not True
 False
 >>> not False
@@ -283,7 +255,7 @@ False
 
 Sans blagues.
 
-# Conditionnelles
+# 5. Conditionnelles
 
 Pour l'instant, nous n'avons effectué que des calculs purement linéaires. Pour
 apprendre à l'ordinateur à faire des choses complexes, il faut pouvoir être
@@ -292,7 +264,7 @@ a traîter.
 C'est la caractéristique fondamentale d'une machine programmable : effectuer un
 choix basé sur une condition.
 
-```Python
+```python
 >>> if a == 5:
 ...     "yep."
 ...
@@ -303,7 +275,7 @@ Après le mot `if` on doit mettre une expression qui va renvoyer un booléen.
 Si le booléen est `True`, on fait quelque chose. Sinon, eh bien, on ne fait
 rien... Sauf si...
 
-```Python
+```python
 >>> if a == 3:
 ...     "yep."
 ... else:
@@ -321,11 +293,11 @@ Tout ceci commence à devenir fort intéressant mais aussi fort pénible, taper
 4 espaces dans son terminal, ce n'est pas pratique... Ouvrons l'éditeur de
 fichiers.
 
-# Fonctions
+# 6. Fonctions
 
 Voici un programme Python simple :
 
-```Python
+```python
 a = 5
 if a == 5:
     "yep."
@@ -333,13 +305,14 @@ else:
     "nop."
 ```
 
-Ici on commence à écrire des programmes en dehors de notre interpréteur, c'est à
-dire dans des fichiers. On notera l'absence des `>>>` et des `...`. Cependant le
-contenu reste le même.
+À partir de maintenant, on écrira les programmes dans des fichiers, en dehors de
+notre interpréteur. On notera l'absence des `>>>` et des `...`, mais le langage
+reste le même : Tous ces exemples peuvent également être copiés directement dans
+l'interpréteur.
 
 Lançons le programme :
 
-```Shell
+```shell
 $ python monfichier.py
 ```
 
@@ -347,7 +320,7 @@ Rien. Python est devenu moins bavard. En mode non-intéractif, il n'affiche pas
 la valeur de toutes les expression. Alors comment faire ? On lui demande
 explicitement d'afficher une valeur :
 
-```Python
+```python
 print("La valeur de a est :")
 print(a)
 ```
@@ -355,9 +328,9 @@ print(a)
 `print` est une *fonction*. Une fonction est un programme que quelqu'un a
 écrit, et qui porte un nom, pour qu'on puisse le ré-utiliser. `print` a été
 écrit par les gens qui ont fait Python, et il fait appel à du code très
-compliqué pas de votre niveau pour pouvoir écrire à l'écran.
+compliqué^W^W pas de votre niveau pour pouvoir écrire à l'écran.
 
-```Shell
+```shell
 $ python monfichier.py
 La valeur de a est :
 5
@@ -371,15 +344,16 @@ def une_fonction():
 
 une_fonction()
 ```
-```Shell
-python ma_premiere_fonction.py
+
+```shell
+$ python monfichier.py
 Hello World
 ```
 
 Une fonction peut faire plusieurs choses. Quand elle a fini, le programme
 reprend où il en était avant qu'on lance la fonction :
 
-```Python
+```python
 def une_autre_fonction():
     print("allo ?")
     print("allooooooo ?")
@@ -390,7 +364,7 @@ une_autre_fonction()
 print("zut, ça a coupé")
 ```
 
-```Shell
+```shell
 bonjour.
 allo ?
 allooooooo ?
@@ -402,11 +376,11 @@ Une fonction est un programme. Un programme est une description d'un traîtement
 automatique de données. En conséquence, il faut pouvoir donner à la fonction des
 données avec lesquelles travailler.
 
-```Python
+```python
 def somme(a, b):
     print(a + b)
 
-somme(1, 2) # Affiche 3
+somme(1, 2) # affiche 3
 ```
 
 Cette fonction prend 2 valeurs avec lesquelles travailler. On appelle ça les
@@ -417,15 +391,14 @@ la fonction.
 Quand on appelle la fonction, on lui donne les données dans l'ordre. Mais on
 peut aussi les désigner par leur nom, et les mettre dans le désordre :
 
-```Python
-somme(b = 0, a = 1)
-1
+```python
+somme(b = 0, a = 1) # affiche 1
 ```
 
 Une fonction peut évidemment nous retourner quelque chose qu'elle a calculé,
 plutôt que de simplement l'afficher.
 
-```Python
+```python
 def somme(a, b):
     return a + b
 ```
@@ -433,9 +406,9 @@ def somme(a, b):
 `return a` signifie basiquement « arrête-toi, et retourne où tu en étais avec
 la valeur a.
 
-```Python
+```python
 a = somme(1, 2)
-print(a) # Affiche 3
+print(a) # affiche 3
 ```
 
 On voit donc qu'un appel de fonction est une... expression ! Un bout de code qui
@@ -444,8 +417,8 @@ la fonction va donner à « return » quand elle aura terminé ses calculs. Du c
 on peut refaire la même chose qu'avant pour afficher le résultat, en combinant
 les appels de fonction :
 
-```Python
->>> print(somme(0, 1)) # Affiche 1
+```python
+print(somme(0, 1)) # affiche 1
 ```
 
 Mais au moins, maintenant, on a le choix. Plutôt que de bêtement l'afficher, on
@@ -456,12 +429,16 @@ d'expression*. Et encore, celle de Python reste assez limitée.
 Dernier détail pour cette partie, que se serait-il passé si on avait stocké le
 résultat de nos fonctions sans `return` ?
 
-```Python
+```python
 def ma_fonction():
     print("eeyup.")
 
 a = ma_fonction()
-print(a) # Affiche None
+print(a)
+```
+
+```shell
+None
 ```
 
 La fonction renvoie quand même une valeur, la valeur `None`, pour « pas de
@@ -469,7 +446,7 @@ valeur ». Si on tape une expression renvoyant `None` dans l'interpréteur,
 Python ne l'affiche pas, contrairement aux nombres ou au texte, par exemple,
 sauf si on le lui demande explicitement avec `print`.
 
-6. La récursion
+# 6. La récursion
 
 On va maintenant écrire de vraies fonctions. De vraies programmes. On rappelle
 que le but d'un programme, c'est de résoudre un problème de façon mécanique en
@@ -486,29 +463,33 @@ si il est divisible par deux, c'est à dire si le reste dans la division de cet
 entier par deux est zéro. En Python, l'opérateur « % » (ou « modulo ») sert à
 ça.
 
+```python
 >>> # Dans l'interpréteur...
 >>> 5 % 2
 1
 >>> 4 % 2
 0
+```
 
 Ceci nous donne une version facile de la fonction :
 
->>> def est_pair(a):
-...     if a % 2 == 0:
-...         return True
-...     else 
-...         return False
-...
+```python
+def est_pair(a):
+    if a % 2 == 0:
+        return True
+    else 
+        return False
+```
 
 Ce n'est pas très joli. On peut mieux faire :
 
->>> def est_pair(a):
-...     return a % 2 == 0
-...
+```python
+def est_pair(a):
+    return a % 2 == 0
+```
 
 La valeur de cette expression est déjà celle que nous avons besoin de renvoyer.
-« True » si le nombre est pair, « False » sinon.
+`True` si le nombre est pair, `False` sinon.
 
 Bien, cela nous a permis de pratiquer un peu les fonctions, d'en écrire une qui
 correspond à un petit problème concret, et de voir qu'il existe parfois plusieurs
@@ -525,7 +506,7 @@ La récursion consiste à trouver un cas pour lequel notre problème est trivial
 Ensuite, comme on ne peut pas gérer tous les cas, pour tous les autres, on
 essaie de se ramener d'une manière ou d'une autre à un cas trivial.
 
-Wow. Tout ça est très vague. Un exemple avec la fonction « est_pair ».
+Wow. Tout ça est très vague. Un exemple avec la fonction `est_pair`.
 
 * Ce qui est sûr, c'est que 1 est impair.
 * Dire qu'un nombre N est pair, c'est comme dire que N - 1 est impair.
@@ -540,19 +521,18 @@ qu'à remonter pour dire si notre nombre était pair ou impair.
 On va donc résoudre le même problème, mais avec des données de plus en plus
 simples, jusqu'à ce qu'elles soient si simples que le problème devient trivial.
 
-Autrement dit, on dispose d'un cas facile
-
 Voici ce que ça donnerait en Python :
 
->>> def est_pair(a):
-...     if a == 1:
-...         # si a est 1, la question ne se pose pas...
-...         return False
-...     else:
-...         # est ce que a est pair ? bon, voyons si a est impair...
-...         # rappel, la négation de est_pair(a) est... !est_pair(a)
-...         return !est_pair(a - 1)
-...
+```python
+def est_pair(a):
+    if a == 1:
+        # si a est 1, la question ne se pose pas...
+        return False
+    else:
+        # est ce que a est pair ? bon, voyons si a est impair...
+        # rappel, la négation de est_pair(a) est... !est_pair(a)
+        return !est_pair(a - 1)
+```
 
 Et voici comment un programmeur résoud un problème de façon *récursive*. En
 tàchant de ramener tous les cas compliqués à un cas plus simple du même probleme.
