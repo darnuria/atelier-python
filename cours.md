@@ -446,7 +446,7 @@ valeur ». Si on tape une expression renvoyant `None` dans l'interpréteur,
 Python ne l'affiche pas, contrairement aux nombres ou au texte, par exemple,
 sauf si on le lui demande explicitement avec `print`.
 
-# 6. La récursion
+# 7. La récursion
 
 On va maintenant écrire de vraies fonctions. De vraies programmes. On rappelle
 que le but d'un programme, c'est de résoudre un problème de façon mécanique en
