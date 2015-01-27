@@ -509,10 +509,12 @@ essaie de se ramener d'une manière ou d'une autre à un cas trivial.
 Wow. Tout ça est très vague. Un exemple avec la fonction `est_pair`.
 
 * Ce qui est sûr, c'est que 1 est impair.
-* Dire qu'un nombre N est pair, c'est comme dire que N - 1 est impair.
-* Dire que N - 1 est impair, c'est comme dire que N - 2 est pair.
-* Dire que N - 2 est pair, c'est comme ...
-* ...
+
+* Par ailleurs...
+    * Dire qu'un nombre N est pair, c'est comme dire que N - 1 est impair.
+    * Dire que N - 1 est impair, c'est comme dire que N - 2 est pair.
+    * Dire que N - 2 est pair, c'est comme ...
+    * ...
 
 Et on descend comme ça. Fatalement, suivant le nombre originel, on finira par
 devoir dire si 1 est pair ou impair. Et ça, c'est plutôt facile ! On n'a plus
