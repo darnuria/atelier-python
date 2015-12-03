@@ -220,12 +220,3 @@ Et `"C'est un nombre impair"` sinon.
 Indice il vous faudra faire appel à l'opérateur modulo `%`. Et utiliser un if.
 Utiliser `print` de la manière suivante: `print("mon message").
 
-## 1.0: Fonctions
-
-### 0.1: Hello World
-
-Écrire dans l'interpreteur Python du texte compris entre `"` ou entre `"`.
-Exemple:
-```python
->>> "Hello World"
-```
