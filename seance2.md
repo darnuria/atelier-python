@@ -138,7 +138,7 @@ Notez bien que la fonction n'est en rien altérée par son appel.
 
 Écrire dans des fichier Python séparées dans un dossier `seance2_fonctions`.
 
-### 1.3.1: Simplifier is_even. (is_even.py_
+### 1.3.1: Simplifier is_even. (is_even.py)
 
 On a vu comment écrire `is_even` avec une fonction.
 Maintenant simplifiez `is_even` pour qu'elle ne tienne que sur une ligne avec un `return`.
@@ -224,7 +224,7 @@ C'est perturbant au début mais force est de constaté que cela marche.
 
 Essayez de dérouler(c'est à dire faire comme si vous etiez Python) sur papier les appels récursif pour bien comprendre pour `is_even(3)`.
 
-### 1.4.1: Écrire la fonction récursive sum_n(n)
+### 1.4.1: Écrire la fonction récursive sum_n(n) (sum_n_rec.py)
 
 Écrire la fonction récursive `sum_n(n)` qui calcul la somme de tout les entiers de 0 à n. n est donner en paramètre.
 
@@ -234,13 +234,41 @@ Le *cas de base* sera si `n == 0`. On renvoie 0.
 
 Le *cas récursif* sera sinon on revoie n + sum_n(n - 1).
 
-# 1.5: Bonus!
+## 1.5: Bonus!
+### 1.5.1: Plus ou moins
 
+Le bonus consiste à écrire un programme à l'aide de fonctions récursives.
+Ce programme dois obtenir aléatoirement un nombre entier mystère entre 0 et 100.
+Et ensuite demander à l'utilisateur un nombre entier compris entre 0 et
+100. Ensuite le programme dois différencier trois cas.
+Le nombre est supérieur au nombre mystère. Alors le programme affiche "c'est
+moins".
+Le nombre est inférieur au nombre mystère. Alors le programme affiche "c'est
+plus".
+Ou alors vous avez gagner le nombre est egal au nombre mystère.
 
+```shell
+> python3 guess_the_number
+Début du jeu!
+Entrez un nombre: 50
+C'est moins
+Entrez un nombre: 25
+C'est plus
+Entrez un nombre: 37
+C'est moins
+Entrez un nombre: 34
+Gagné!
+```
+Voila vous devrez pour avoir des nombres aléatoire utiliser la fonction `randint`
+du module `random`. On reviendra sur les `modules` plus tard.
 
+Pour l'instant sachez que cela s'utilise comme cela.
+```python
+import random # On indique à python qu'on aimerais utiliser le module random.
 
+print(random.randint(0, 101)) # Affiche un nombre aleatoire entre 0 et 100.
+```
 
-
-
-
-
+Voila bon courage identifiez bien les informations dont vous avez besoin dans la
+fonction récursive. Identifiez bien les cas d'arrêts et écrivez vous un petit
+algorithme sur papier avant de commencer ça vous évitera des nœuds au cerveau.
