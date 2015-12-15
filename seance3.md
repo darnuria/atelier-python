@@ -45,7 +45,7 @@ def add3(a, b ,c):
 
 Dans le cas des appels récursifs ont à donc une accumulation de `return` qui doit se résoudre. Comme nous avions vu avec la fonction somme.
 
-## 2.0.2
+## 2.0.3: Fonctions récursives et boucles
 
 A titre d'exemple voici plusieurs façon d'écrire la fonction qui calcul la (factorielle)[https://fr.wikipedia.org/wiki/Factorielle] d'un nombre n.
 
@@ -84,7 +84,7 @@ factorielle d'un nombre n.
 Nous avions vu jusque la que les fonctions récursives.
 Nous reviendrons sur les boucles `for` et `while` dans ce cours.
 
-## 1.1: Itération
+## 2.1: Itération
 
 Un des principes récurrent en programme est l'itération. Il peut s'exprimer
 au travers de fonctions récursives ou bien de boucles. L'idée de de
@@ -101,7 +101,7 @@ La façon la plus “commune” en python pour exprimer l'itération est en gén
 
 Cependant il était intéressant de voir les fonctions récursives pour s'habituer aux fonctions.
 
-## 1.1.1: mot-clef `while`
+### 2.1.1: mot-clef `while`
 
 Nous avons vu en cours rapidement le mot-clé `while` qui permet de répéter un calcul tant qu'une condition n'est pas satisfaite.
 
@@ -126,7 +126,7 @@ print(somme(3))
 Une pratique courante est d'incrémenter(ajouter 1) ou décrémenter(enlever 1) à une variable pour savoir si on rempli la condition de fin.
 Nous reviendrons dessus en cours.
 
-## 1.1.2: mot-clef `for`
+### 2.1.2: mot-clef `for`
 
 En python il existe aussi des boucles `for`. Ce mot clef est très puissant
 et permet de faire beaucoup de choses. Pour l'instant nous l'utiliseront
@@ -149,11 +149,10 @@ Affichera `0, 1, 2, 3` avec 4 exclut.
 On observe donc que `range(0, 4)` crée une _collection_ et que _elem_ est tour
 à tour un des éléments de la collection crée par `range(0, 4)`.
 
-
 Nous reviendrons dans les détails de la boucle for une fois que nous seront
 aux listes mais c'est une notion très importante de Python.
 
-## 2.3: Collections
+## 2.2: Collections
 
 Actuellement nous avons utiliser que des structures de données très simple tel que des entiers.
 
@@ -179,14 +178,14 @@ https://docs.python.org/3/library/index.html
 Cela peut paraitre parfois fastidieux mais savoir utiliser de la
 documentation vous rends vraiment indépendant. (imaginez un monde sans StackOverflow...)
 
-## 2.3.1: Les chaines de caractères
+## 2.2.1: Les chaines de caractères
 
 Documentation associée:
 https://docs.python.org/3.4/tutorial/introduction.html#strings
 
 A venir
 
-## 2.3.2: Les Listes
+## 2.2.2: Les Listes
 
 Documentation associée:
 https://docs.python.org/3.4/tutorial/introduction.html#lists
