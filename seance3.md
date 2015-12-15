@@ -45,9 +45,9 @@ def add3(a, b ,c):
 
 Dans le cas des appels récursifs ont à donc une accumulation de `return` qui doit se résoudre. Comme nous avions vu avec la fonction somme.
 
-## 2.0.3: Fonctions récursives et boucles
+## 2.0.3: Styles de fonction
 
-A titre d'exemple voici plusieurs façon d'écrire la fonction qui calcul la (factorielle)[https://fr.wikipedia.org/wiki/Factorielle] d'un nombre n.
+A titre d'exemple voici plusieurs façon d'écrire la fonction qui calcul la [factorielle](https://fr.wikipedia.org/wiki/Factorielle) d'un nombre n.
 
 ```python
 # De façon récursive.
@@ -91,11 +91,11 @@ au travers de fonctions récursives ou bien de boucles. L'idée de de
 continuer un calcul tant qu'une condition n'est pas satisfaite.
 
 Les fonctions récursives sont une façon de faire adopté par le paradigme de
-(programmation
- fonctionnelle)[https://fr.wikipedia.org/wiki/Programmation_fonctionnelle].
+[programmation fonctionnelle](https://fr.wikipedia.org/wiki/Programmation_fonctionnelle).
+
 Cependant Python est un langage versé principalement dans les paradigmes de programmation
-(Imperative)[https://fr.wikipedia.org/wiki/Programmation_imp%C3%A9rative] et
-(Objet)[https://fr.wikipedia.org/wiki/Programmation_orient%C3%A9e_objet].
+[Imperative](https://fr.wikipedia.org/wiki/Programmation_imp%C3%A9rative) et
+[Objet](https://fr.wikipedia.org/wiki/Programmation_orient%C3%A9e_objet).
 
 La façon la plus “commune” en python pour exprimer l'itération est en général la boucle `for`.
 
@@ -157,7 +157,7 @@ aux listes mais c'est une notion très importante de Python.
 Actuellement nous avons utiliser que des structures de données très simple tel que des entiers.
 
 A présent nous allons voir qu'il est possible de créer des collections de
-données. Vous avez déjà manipuler une structure tel que celle çi. Il s'agissait des chaines de caractères qui regroupe plusieurs caractères.
+données. Vous avez déjà manipuler une structure tel que celle çi. Il s'agissait des chaines de caractères qui regroupent plusieurs caractères.
 
 ```python
 collection = "Je suis une collection!"
@@ -189,6 +189,7 @@ A venir
 
 Documentation associée:
 https://docs.python.org/3.4/tutorial/introduction.html#lists
-et
-https://docs.python.org/3.4/tutorial/datastructures.html#more-on-lists
 
+Et: https://docs.python.org/3.4/tutorial/datastructures.html#more-on-lists
+
+A venir
